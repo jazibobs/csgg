@@ -1,0 +1,31 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  
+    <div class="wrapper">
+  
+      <div class="footer-col-wrapper">
+        <div class="footer-col">
+          <p class="feed-subscribe">
+            <a href="{{ site.feed.path | default: 'feed.xml' | absolute_url }}">
+              <svg class="svg-icon orange">
+                <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+              </svg><span>Subscribe</span>
+            </a>
+          </p>
+        {%- if site.author %}
+          <ul class="contact-list">
+            {% if site.author.name -%}
+              <li class="p-name">Website by {{ site.author.name | escape }}</li>
+            {% endif -%}
+          </ul>
+        {%- endif %}
+        </div>
+        <div class="footer-col">
+            <p>{{ site.description | escape }}</p>
+            <p>Want to make this site better? <a href="https://github.com/jazibobs/csgg/issues">Raise an issue on GitHub with your suggestions.</a></p>
+            <p><small>The content on this website is licensed under a <a href="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</small></p> 
+        </div>
+      </div>
+    </div>
+  
+  </footer>
